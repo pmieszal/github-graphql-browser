@@ -1,0 +1,14 @@
+import UIKit
+
+protocol {{ name }}InteractorLogic {}
+protocol {{ name }}DataStore {}
+
+final class {{ name }}Interactor: {{ name }}DataStore {
+    let presenter: {{ name }}PresenterLogic
+
+    init(presenter: {{ name }}PresenterLogic) {
+        self.presenter = presenter
+    }
+}
+
+extension {{ name }}Interactor: {{ name }}InteractorLogic {}

@@ -1,0 +1,20 @@
+import UIKit
+
+public protocol {{ name }}Dependency {}
+public protocol {{ name }}Navigation {}
+
+public final class {{ name }}Builder {
+    public init() {}
+    public func build{{ name }}Module(dependency: {{ name }}Dependency,
+                                      navigation: {{ name }}Navigation) -> UIViewController {
+        let viewController = {{ name }}ViewController()
+        
+        let presenter = {{ name }}Presenter(viewController: viewController)
+        let interactor = {{ name }}Interactor(presenter: presenter)
+        
+        viewController.interactor = interactor
+        viewController.navigation = navigation
+        
+        return viewController
+    }
+}

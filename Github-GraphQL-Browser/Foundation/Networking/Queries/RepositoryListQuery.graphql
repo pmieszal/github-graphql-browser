@@ -1,0 +1,16 @@
+query RepositoryList($owner: String!, $count: Int!, $after: String) {
+  repositoryOwner(login: $owner) {
+    id
+    repositories(first: $count, after: $after, orderBy: {direction: DESC, field: PUSHED_AT}) {
+      nodes {
+        id
+        name
+        url
+      }
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
+    }
+  }
+}

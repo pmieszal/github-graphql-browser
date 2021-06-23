@@ -1,0 +1,47 @@
+query RepositoryDetails($owner: String!, $name:String!, $issuesCount: Int!, $pullRequestsCount: Int!) {
+  repository(owner:$owner, name:$name) {
+      id
+      name
+      url
+    openedIssues: issues(first: $issuesCount, filterBy: {states: [OPEN]}, orderBy:{field:UPDATED_AT, direction:DESC}) {
+      totalCount
+      nodes {
+        id
+        number
+        title
+        url
+        closed
+      }
+    }
+    closedIssues: issues(first: $issuesCount, filterBy: {states: [CLOSED]}, orderBy:{field:UPDATED_AT, direction:DESC}) {
+      totalCount
+      nodes {
+        id
+        number
+        title
+        url
+        closed
+      }
+    }
+    openedPRs: pullRequests(first: $pullRequestsCount, states: [OPEN], orderBy:{field:UPDATED_AT, direction:DESC}) {
+      totalCount
+      nodes {
+        id
+        number
+        title
+        url
+        closed
+      }
+    }
+    closedPRs: pullRequests(first: $pullRequestsCount, states: [CLOSED, MERGED], orderBy:{field:UPDATED_AT, direction:DESC}) {
+      totalCount
+      nodes {
+        id
+        number
+        title
+        url
+        closed
+      }
+    }
+  }
+}

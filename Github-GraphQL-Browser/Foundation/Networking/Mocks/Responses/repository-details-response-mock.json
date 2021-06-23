@@ -1,0 +1,307 @@
+{
+    "data": {
+        "__typename": "Query",
+        "repository": {
+            "__typename": "Repository",
+            "id": "MDEwOlJlcG9zaXRvcnk2NDE3NjcxNw==",
+            "name": "apollo-ios",
+            "url": "https://github.com/apollographql/apollo-ios",
+            "openedIssues": {
+                "__typename": "IssueConnection",
+                "totalCount": 86,
+                "nodes": [
+                    {
+                        "__typename": "Issue",
+                        "id": "MDU6SXNzdWU5MDI3MTE2MzE=",
+                        "number": 1808,
+                        "title": "Multiple Websocket Crashes after updating to 0.43.0",
+                        "url": "https://github.com/apollographql/apollo-ios/issues/1808",
+                        "closed": false
+                    },
+                    {
+                        "__typename": "Issue",
+                        "id": "MDU6SXNzdWU5MTc2Nzk3MzQ=",
+                        "number": 1822,
+                        "title": "Add ability to delete objects from the cache based on pattern-matching the key",
+                        "url": "https://github.com/apollographql/apollo-ios/issues/1822",
+                        "closed": false
+                    },
+                    {
+                        "__typename": "Issue",
+                        "id": "MDU6SXNzdWU5MjI5MzE2MTU=",
+                        "number": 1837,
+                        "title": "Add ability to send custom identifiers with web socket messages",
+                        "url": "https://github.com/apollographql/apollo-ios/issues/1837",
+                        "closed": false
+                    },
+                    {
+                        "__typename": "Issue",
+                        "id": "MDU6SXNzdWU5MjA2MjE2NDQ=",
+                        "number": 1829,
+                        "title": "Main branch ScalarType and NSNull not found",
+                        "url": "https://github.com/apollographql/apollo-ios/issues/1829",
+                        "closed": false
+                    },
+                    {
+                        "__typename": "Issue",
+                        "id": "MDU6SXNzdWU0MzYzMTcyMTg=",
+                        "number": 516,
+                        "title": "GraphQLQueryWatcher retained by ApolloStore",
+                        "url": "https://github.com/apollographql/apollo-ios/issues/516",
+                        "closed": false
+                    },
+                    {
+                        "__typename": "Issue",
+                        "id": "MDU6SXNzdWU5MTc2OTkzOTA=",
+                        "number": 1823,
+                        "title": "Remove dependency on apollo CLI for fetching schema",
+                        "url": "https://github.com/apollographql/apollo-ios/issues/1823",
+                        "closed": false
+                    },
+                    {
+                        "__typename": "Issue",
+                        "id": "MDU6SXNzdWU5MTc3Nzc2NDQ=",
+                        "number": 1825,
+                        "title": "Codegen tool singularizes pluralized field names in Auto Generated Apollo GraphQL field. ",
+                        "url": "https://github.com/apollographql/apollo-ios/issues/1825",
+                        "closed": false
+                    },
+                    {
+                        "__typename": "Issue",
+                        "id": "MDU6SXNzdWU4OTI4MjQwNjY=",
+                        "number": 1794,
+                        "title": "Watchers aren't triggered when updating an object after its cache key has changed",
+                        "url": "https://github.com/apollographql/apollo-ios/issues/1794",
+                        "closed": false
+                    },
+                    {
+                        "__typename": "Issue",
+                        "id": "MDU6SXNzdWU4OTI4MzYxODM=",
+                        "number": 1795,
+                        "title": "Support Batch Query",
+                        "url": "https://github.com/apollographql/apollo-ios/issues/1795",
+                        "closed": false
+                    },
+                    {
+                        "__typename": "Issue",
+                        "id": "MDU6SXNzdWU5MDA1MDM4NTY=",
+                        "number": 1807,
+                        "title": "Performance issues - OperationQueue not performing async",
+                        "url": "https://github.com/apollographql/apollo-ios/issues/1807",
+                        "closed": false
+                    }
+                ]
+            },
+            "closedIssues": {
+                "__typename": "IssueConnection",
+                "totalCount": 762,
+                "nodes": [
+                    {
+                        "__typename": "Issue",
+                        "id": "MDU6SXNzdWU5MjM1NTcyMDg=",
+                        "number": 1841,
+                        "title": "\"The Network connection was lost\" error when app goes from background to foreground",
+                        "url": "https://github.com/apollographql/apollo-ios/issues/1841",
+                        "closed": true
+                    },
+                    {
+                        "__typename": "Issue",
+                        "id": "MDU6SXNzdWUzMTE4NDM4NDQ=",
+                        "number": 247,
+                        "title": "Action Required: Fix Renovate Configuration",
+                        "url": "https://github.com/apollographql/apollo-ios/issues/247",
+                        "closed": true
+                    },
+                    {
+                        "__typename": "Issue",
+                        "id": "MDU6SXNzdWU4OTQzMTkyOTI=",
+                        "number": 1797,
+                        "title": "Invalid redeclaration ",
+                        "url": "https://github.com/apollographql/apollo-ios/issues/1797",
+                        "closed": true
+                    },
+                    {
+                        "__typename": "Issue",
+                        "id": "MDU6SXNzdWU5MTI4OTgyNjg=",
+                        "number": 1818,
+                        "title": "Uploading of files no longer working after setting up Split Transport to support Web Sockets / Subscriptions",
+                        "url": "https://github.com/apollographql/apollo-ios/issues/1818",
+                        "closed": true
+                    },
+                    {
+                        "__typename": "Issue",
+                        "id": "MDU6SXNzdWU5MDc3MTgxNzI=",
+                        "number": 1814,
+                        "title": "schema.json not updated when GraphQL server schema is changed",
+                        "url": "https://github.com/apollographql/apollo-ios/issues/1814",
+                        "closed": true
+                    },
+                    {
+                        "__typename": "Issue",
+                        "id": "MDU6SXNzdWU4MzQ0MTQyMjI=",
+                        "number": 1726,
+                        "title": "Unable to read a JSON data type using Apollo - iOS client",
+                        "url": "https://github.com/apollographql/apollo-ios/issues/1726",
+                        "closed": true
+                    },
+                    {
+                        "__typename": "Issue",
+                        "id": "MDU6SXNzdWU5MDczMzIxNjQ=",
+                        "number": 1813,
+                        "title": "Wrong type in generated code",
+                        "url": "https://github.com/apollographql/apollo-ios/issues/1813",
+                        "closed": true
+                    },
+                    {
+                        "__typename": "Issue",
+                        "id": "MDU6SXNzdWU4MzkzMDI3NTI=",
+                        "number": 1732,
+                        "title": "Javascript error when attempting to run codegen",
+                        "url": "https://github.com/apollographql/apollo-ios/issues/1732",
+                        "closed": true
+                    },
+                    {
+                        "__typename": "Issue",
+                        "id": "MDU6SXNzdWU4OTkyODMzMTc=",
+                        "number": 1806,
+                        "title": "Command PhaseScriptExecution failed with a nonzero exit code",
+                        "url": "https://github.com/apollographql/apollo-ios/issues/1806",
+                        "closed": true
+                    },
+                    {
+                        "__typename": "Issue",
+                        "id": "MDU6SXNzdWU4OTY5ODI0NTM=",
+                        "number": 1799,
+                        "title": "Package.resolved being reset after checking out a branch with updates to Apollo",
+                        "url": "https://github.com/apollographql/apollo-ios/issues/1799",
+                        "closed": true
+                    }
+                ]
+            },
+            "openedPRs": {
+                "__typename": "PullRequestConnection",
+                "totalCount": 4,
+                "nodes": [
+                    {
+                        "__typename": "PullRequest",
+                        "id": "MDExOlB1bGxSZXF1ZXN0NjcwOTQ3MjU2",
+                        "number": 1836,
+                        "title": "[NetworkFetchInterceptor] Don't early exit during request completion if the task was cancelled",
+                        "url": "https://github.com/apollographql/apollo-ios/pull/1836",
+                        "closed": false
+                    },
+                    {
+                        "__typename": "PullRequest",
+                        "id": "MDExOlB1bGxSZXF1ZXN0NTI1ODk4NDcw",
+                        "number": 1534,
+                        "title": "Fix Linux compatibility issues",
+                        "url": "https://github.com/apollographql/apollo-ios/pull/1534",
+                        "closed": false
+                    },
+                    {
+                        "__typename": "PullRequest",
+                        "id": "MDExOlB1bGxSZXF1ZXN0NjU1MDI0MjE3",
+                        "number": 1809,
+                        "title": "Update CLI version to 2.33.1 in codegen script",
+                        "url": "https://github.com/apollographql/apollo-ios/pull/1809",
+                        "closed": false
+                    },
+                    {
+                        "__typename": "PullRequest",
+                        "id": "MDExOlB1bGxSZXF1ZXN0NTkxMDE2NjY0",
+                        "number": 1710,
+                        "title": "Cache clarification",
+                        "url": "https://github.com/apollographql/apollo-ios/pull/1710",
+                        "closed": false
+                    }
+                ]
+            },
+            "closedPRs": {
+                "__typename": "PullRequestConnection",
+                "totalCount": 878,
+                "nodes": [
+                    {
+                        "__typename": "PullRequest",
+                        "id": "MDExOlB1bGxSZXF1ZXN0NjczNzEzNDg4",
+                        "number": 1844,
+                        "title": "chore(deps): update dependency striptags to 3.2.0 [security] - autoclosed",
+                        "url": "https://github.com/apollographql/apollo-ios/pull/1844",
+                        "closed": true
+                    },
+                    {
+                        "__typename": "PullRequest",
+                        "id": "MDExOlB1bGxSZXF1ZXN0Njc0OTc0Mzc1",
+                        "number": 1846,
+                        "title": "fix(deps): update dependency gatsby-theme-apollo-docs to v4.7.11",
+                        "url": "https://github.com/apollographql/apollo-ios/pull/1846",
+                        "closed": true
+                    },
+                    {
+                        "__typename": "PullRequest",
+                        "id": "MDExOlB1bGxSZXF1ZXN0NjczNzc1MDMw",
+                        "number": 1845,
+                        "title": "Bump ws from 5.2.2 to 5.2.3 in /SimpleUploadServer",
+                        "url": "https://github.com/apollographql/apollo-ios/pull/1845",
+                        "closed": true
+                    },
+                    {
+                        "__typename": "PullRequest",
+                        "id": "MDExOlB1bGxSZXF1ZXN0NjczMDY4MDQx",
+                        "number": 1842,
+                        "title": "Fix Transient Test Failures",
+                        "url": "https://github.com/apollographql/apollo-ios/pull/1842",
+                        "closed": true
+                    },
+                    {
+                        "__typename": "PullRequest",
+                        "id": "MDExOlB1bGxSZXF1ZXN0NjczNjg2MDY5",
+                        "number": 1843,
+                        "title": "Bump striptags from 3.1.1 to 3.2.0 in /docs",
+                        "url": "https://github.com/apollographql/apollo-ios/pull/1843",
+                        "closed": true
+                    },
+                    {
+                        "__typename": "PullRequest",
+                        "id": "MDExOlB1bGxSZXF1ZXN0NjY4NjQ1MTY1",
+                        "number": 1826,
+                        "title": "Fix retain cycle",
+                        "url": "https://github.com/apollographql/apollo-ios/pull/1826",
+                        "closed": true
+                    },
+                    {
+                        "__typename": "PullRequest",
+                        "id": "MDExOlB1bGxSZXF1ZXN0MjY0NzA2NDEx",
+                        "number": 486,
+                        "title": "Update dependency gatsby-theme-apollo-docs to v0.2.40 - autoclosed",
+                        "url": "https://github.com/apollographql/apollo-ios/pull/486",
+                        "closed": true
+                    },
+                    {
+                        "__typename": "PullRequest",
+                        "id": "MDExOlB1bGxSZXF1ZXN0MTc3MDExMDA5",
+                        "number": 239,
+                        "title": "Update dependency meteor-theme-hexo to v1.0.3",
+                        "url": "https://github.com/apollographql/apollo-ios/pull/239",
+                        "closed": true
+                    },
+                    {
+                        "__typename": "PullRequest",
+                        "id": "MDExOlB1bGxSZXF1ZXN0MTc3MDEwOTcz",
+                        "number": 238,
+                        "title": "Update dependency lodash to v4.17.5",
+                        "url": "https://github.com/apollographql/apollo-ios/pull/238",
+                        "closed": true
+                    },
+                    {
+                        "__typename": "PullRequest",
+                        "id": "MDExOlB1bGxSZXF1ZXN0MTc3MDEwOTE0",
+                        "number": 237,
+                        "title": "Update dependency handlebars to v4.0.11",
+                        "url": "https://github.com/apollographql/apollo-ios/pull/237",
+                        "closed": true
+                    }
+                ]
+            }
+        }
+    }
+}

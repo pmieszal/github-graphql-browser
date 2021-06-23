@@ -1,0 +1,5 @@
+#include "Base.xcconfig"
+
+APP_NAME = $(inherited) Dev
+//DEVELOPMENT_TEAM =
+PRODUCT_BUNDLE_IDENTIFIER = pl.patryk.mieszala.githubql.dev

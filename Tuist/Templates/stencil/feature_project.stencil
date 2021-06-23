@@ -1,0 +1,12 @@
+import ProjectDescription
+import ProjectDescriptionHelpers
+
+let project = Project.framework(
+    type: <#Feature#>,
+    targets: uFeatureTarget.feature,
+    internalDependencies: [
+        Foundation.domain,
+    ],
+    resources: [
+        .glob(pattern: "**/*.xib"),
+    ])

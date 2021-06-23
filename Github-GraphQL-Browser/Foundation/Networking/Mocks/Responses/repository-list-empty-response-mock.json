@@ -1,0 +1,18 @@
+{
+    "data": {
+        "repositoryOwner": {
+            "__typename": "Organization",
+            "id": "MDEyOk9yZ2FuaXphdGlvbjE3MTg5Mjc1",
+            "login": "apollographql",
+            "repositories": {
+                "__typename": "RepositoryConnection",
+                "nodes": [],
+                "pageInfo": {
+                    "__typename": "PageInfo",
+                    "hasNextPage": false,
+                    "endCursor": ""
+                }
+            }
+        }
+    }
+}

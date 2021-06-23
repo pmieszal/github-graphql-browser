@@ -1,0 +1,10 @@
+import UIKit
+
+protocol {{ name }}ViewControllerLogic: AnyObject {}
+
+final class {{ name }}ViewController: UIViewController {
+    var interactor: {{ name }}InteractorLogic?
+    var navigation: {{ name }}Navigation?
+}
+
+extension {{ name }}ViewController: {{ name }}ViewControllerLogic {}

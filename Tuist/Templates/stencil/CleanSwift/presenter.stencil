@@ -1,0 +1,13 @@
+import UIKit
+
+protocol {{ name }}PresenterLogic {}
+
+final class {{ name }}Presenter {
+    weak var viewController: {{ name }}ViewControllerLogic?
+
+    init(viewController: {{ name }}ViewControllerLogic?) {
+        self.viewController = viewController
+    }
+}
+
+extension {{ name }}Presenter: {{ name }}PresenterLogic {}
