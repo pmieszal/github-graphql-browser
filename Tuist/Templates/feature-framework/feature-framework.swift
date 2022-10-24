@@ -36,7 +36,7 @@ let template = Template(
         nameAttribute,
         .optional("platform", default: "iOS"),
     ],
-    files: [
+    items: [
         .file(path: "\(rootPath)/\(nameAttribute)/Project.swift", templatePath: "../stencil/feature_project.stencil"),
         // Sources
         .file(

@@ -3,7 +3,7 @@ import ProjectDescriptionHelpers
 
 let appSettings: SettingsDictionary = ["CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER": "YES"]
 
-let iosConfigurations: [CustomConfiguration] = [
+let iosConfigurations: [Configuration] = [
     .debug(
         name: "Debug",
         settings: SettingsDictionary()
@@ -18,7 +18,7 @@ let iosConfigurations: [CustomConfiguration] = [
         xcconfig: .relativeToCurrentFile("SupportingFiles/Configuration/Release.xcconfig")),
 ]
 
-let iosSettings = Settings(configurations: iosConfigurations)
+let iosSettings = Settings.settings(configurations: iosConfigurations)
 
 let rootPath = "Github-GraphQL-Browser"
 
@@ -33,7 +33,7 @@ let iosTarget = Target(
     resources: [
         .glob(pattern: "Resources/**"),
     ],
-    actions: isCI ? [] : [
+    scripts: isCI ? [] : [
         .post(
             path: .relativeToRoot("Scripts/swiftlint.sh"),
             arguments: ["../../.swiftlint.yml"],

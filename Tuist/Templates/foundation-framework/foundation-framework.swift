@@ -36,7 +36,7 @@ let template = Template(
         nameAttribute,
         .optional("platform", default: "iOS"),
     ],
-    files: [
+    items: [
         .string(path: "\(rootPath)/\(nameAttribute)/Sources/\(nameAttribute).swift", contents: exampleContents),
         .string(path: "\(rootPath)/\(nameAttribute)/Tests/\(nameAttribute)Tests.swift", contents: testContents),
         .string(path: "\(rootPath)/\(nameAttribute)/Mocks/\(nameAttribute)Mock.swift", contents: exampleContents),

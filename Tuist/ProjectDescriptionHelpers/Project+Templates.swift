@@ -1,6 +1,6 @@
 import ProjectDescription
 
-public let isCI = Environment.isCI?.getBoolean(default: false) ?? false
+public let isCI = Environment.isCi.getBoolean(default: false)
 public let moduleBundleIdPrefix = "pl.patryk.mieszala.githubql"
 public let testSuiteDependencies: [TargetDependency] = [
     .xctest,
@@ -63,7 +63,7 @@ public extension Project {
                               targetVersion: "13.0",
                               devices: [.iphone, .ipad]),
                           targets: Set<uFeatureTarget>,
-                          actions: [ProjectDescription.TargetAction] = [],
+                          actions: [ProjectDescription.TargetScript] = [],
                           packages: [Package] = [],
                           externalDependencies: [TargetDependency] = [],
                           internalDependencies: [Foundation] = [],
@@ -77,10 +77,11 @@ public extension Project {
                           testsSettings: SettingsDictionary = [:],
                           additionalPlistRows: [String: ProjectDescription.InfoPlist.Value] = [:])
         -> Project {
+            
         let settings = settings
             .merging(["CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER": "YES"])
         
-        let configurations: [CustomConfiguration] = [
+        let configurations: [Configuration] = [
             .debug(
                 name: "Debug",
                 settings: SettingsDictionary()
@@ -96,7 +97,7 @@ public extension Project {
         let testsSettings = testsSettings
             .merging(["CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER": "YES"])
         
-        let testsConfigurations: [CustomConfiguration] = [
+        let testsConfigurations: [Configuration] = [
             .debug(
                 name: "Debug",
                 settings: SettingsDictionary()
@@ -126,7 +127,7 @@ public extension Project {
         var targetDependencies: [TargetDependency] = internalDependencies.map {
             .project(target: $0.name, path: .relativeToRoot($0.path))
         }
-        targetDependencies.append(contentsOf: sdks.map { .sdk(name: $0) })
+            targetDependencies.append(contentsOf: sdks.map { .sdk(name: $0, type: .framework) })
         
         var commonRows: [String: ProjectDescription.InfoPlist.Value] = [
             "CFBundleLocalizations": ["en"],
@@ -165,9 +166,9 @@ public extension Project {
                         sources: frameworkSources,
                         resources: resources,
                         headers: headers,
-                        actions: actions,
+                        scripts: actions,
                         dependencies: targetDependencies + externalDependencies,
-                        settings: Settings(
+                        settings: Settings.settings(
                             base: [
                                 "CODE_SIGN_IDENTITY": "",
                                 "CODE_SIGNING_REQUIRED": "NO",
@@ -189,12 +190,12 @@ public extension Project {
                                 "\(target.suffix)/**/*.swift",
                                 "\(target.suffix)/**/*.m",
                             ]),
-                        headers: Headers(
+                        headers: Headers.headers(
                             public: nil,
                             private: nil,
                             project: "\(target.suffix)/**/*.h"),
                         dependencies: targetDependencies + testsDependencies,
-                        settings: Settings(
+                        settings: Settings.settings(
                             base: [
                                 "TEST_HOST": "",
                             ],
@@ -216,12 +217,12 @@ public extension Project {
                                 "\(target.suffix)/**/*.swift",
                                 "\(target.suffix)/**/*.m",
                             ]),
-                        headers: Headers(
+                        headers: Headers.headers(
                             public: nil,
                             private: nil,
                             project: "\(target.suffix)/**/*.h"),
                         dependencies: targetDependencies + testsDependencies,
-                        settings: Settings(configurations: testsConfigurations)))
+                        settings: Settings.settings(configurations: testsConfigurations)))
             case .example:
                 projectTargets.append(
                     Target(
@@ -237,7 +238,7 @@ public extension Project {
                         sources: SourceFilesList(globs: ["\(target.suffix)/**/*.swift"]),
                         resources: resources,
                         dependencies: targetDependencies + [.target(name: "\(type.name)\(uFeatureTarget.mocks.suffix)")],
-                        settings: Settings(
+                        settings: Settings.settings(
                             base: [
                                 "ASSETCATALOG_COMPILER_APPICON_NAME": "",
                                 "DEVELOPMENT_TEAM": "", // TODO: this?
@@ -255,7 +256,7 @@ public extension Project {
                         sources: SourceFilesList(globs: ["\(target.suffix)/**/*.swift"]),
                         resources: "\(target.suffix)/**/*.json",
                         dependencies: mockDependencies + [.target(name: "\(type.name)")],
-                        settings: Settings(configurations: configurations)))
+                        settings: Settings.settings(configurations: configurations)))
             }
         }
         
@@ -266,7 +267,7 @@ public extension Project {
         return Project(
             name: type.name,
             packages: packages,
-            settings: Settings(configurations: configurations),
+            settings: Settings.settings(configurations: configurations),
             targets: projectTargets)
     }
 }

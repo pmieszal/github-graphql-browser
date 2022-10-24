@@ -3,7 +3,7 @@ import ProjectDescriptionHelpers
 
 let settings: SettingsDictionary = ["CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER": "YES"]
 
-let configuration: [CustomConfiguration] = [
+let configuration: [Configuration] = [
     .debug(
         name: "Debug",
         settings: SettingsDictionary()
@@ -35,13 +35,13 @@ let target = Target(
         "Scripts/**/*",
         "Sourcery/**/*",
     ],
-    actions: [
+    scripts: [
         .pre(
             path: .relativeToManifest("Scripts/generate_secrets.sh"),
             arguments: [],
             name: "Generate secrets"),
     ],
-    settings: Settings(
+    settings: Settings.settings(
         base: [
             "CODE_SIGN_IDENTITY": "",
             "CODE_SIGNING_REQUIRED": "NO",
@@ -52,5 +52,5 @@ let target = Target(
 
 let project = Project(
     name: type.name,
-    settings: Settings(configurations: configuration),
+    settings: Settings.settings(configurations: configuration),
     targets: [target])
